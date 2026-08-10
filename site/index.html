@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ready Instrument One turns a Windows MIDI controller into an instrument that is always ready to play.">
+  <meta name="theme-color" content="#182327">
+  <title>Ready Instrument One</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Ready Instrument One home">
+      <span class="brand-mark" aria-hidden="true">
+        <span class="keys">
+          <i></i><i></i><i></i><i></i><i></i>
+        </span>
+        <span class="led"></span>
+      </span>
+      <span>Ready Instrument One</span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="#experience">Experience</a>
+      <a href="#beta">Beta</a>
+      <a href="https://github.com/darmolian/ready-instrument-one/issues">Feedback</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero wrap">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="ready-dot"></span> Instrument mode for Windows</p>
+        <h1>Your MIDI controller,<br><em>always ready.</em></h1>
+        <p class="lede">Ready Instrument One makes your favorite virtual instruments feel like one dependable hardware keyboard—ready after startup, organized as patches, and out of the way when your DAW needs control.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#beta">Join the Windows beta</a>
+          <a class="button secondary" href="#experience">See how it works</a>
+        </div>
+      </div>
+
+      <div class="instrument-panel" aria-label="Stylized Ready Instrument One patch panel">
+        <div class="panel-top">
+          <span>READY INSTRUMENT ONE</span>
+          <span class="panel-status"><i></i> READY</span>
+        </div>
+        <div class="screen">
+          <span class="screen-label">CURRENT PATCH</span>
+          <strong>Grand Piano</strong>
+          <small>Addictive Keys</small>
+        </div>
+        <div class="patches" aria-hidden="true">
+          <span class="active"><b>01</b> Grand Piano</span>
+          <span><b>02</b> Soft Rhodes</span>
+          <span><b>03</b> Warm Pad</span>
+        </div>
+        <div class="piano-keys" aria-hidden="true">
+          <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+        </div>
+      </div>
+    </section>
+
+    <section class="manifesto">
+      <div class="wrap compact">
+        <p>Not a DAW. Not another project to configure.</p>
+        <h2>It treats your computer like the sound engine inside a digital piano.</h2>
+      </div>
+    </section>
+
+    <section class="features wrap" id="experience">
+      <div class="section-heading">
+        <p class="eyebrow">The instrument experience</p>
+        <h2>From power-on to playing, with less friction.</h2>
+      </div>
+      <div class="feature-grid">
+        <article>
+          <span class="feature-number">01</span>
+          <h3>Always ready</h3>
+          <p>Starts quietly with Windows and restores your last patch, audio device, and MIDI routing.</p>
+        </article>
+        <article>
+          <span class="feature-number">02</span>
+          <h3>Sounds become patches</h3>
+          <p>Give instruments useful names, arrange them your way, and move between them from one focused surface.</p>
+        </article>
+        <article>
+          <span class="feature-number">03</span>
+          <h3>Knows when to step aside</h3>
+          <p>Automatically releases the audio engine while a configured DAW is running, then returns when it closes.</p>
+        </article>
+        <article>
+          <span class="feature-number">04</span>
+          <h3>Built for the tray</h3>
+          <p>Clear ready, loading, standby, and handoff states mean the main window can disappear until you need it.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="beta-section" id="beta">
+      <div class="wrap beta-layout">
+        <div class="beta-copy">
+          <p class="eyebrow">Early Windows beta</p>
+          <h2>Help shape an instrument—not a miniature DAW.</h2>
+          <p>The first beta is intended for a small group of musicians who can test different MIDI controllers, ASIO interfaces, and VST3 instruments.</p>
+          <ul class="requirements">
+            <li>Windows 10 or 11, 64-bit</li>
+            <li>A MIDI controller and ASIO audio interface</li>
+            <li>At least one 64-bit VST3 instrument</li>
+          </ul>
+        </div>
+
+        <aside class="download-card" aria-live="polite">
+          <div class="download-state">
+            <span class="release-light" id="release-light"></span>
+            <span id="release-kicker">Release preparation</span>
+          </div>
+          <h3 id="release-title">Beta download preparing</h3>
+          <p id="release-description">The first public build is completing distribution and licensing checks. No installer is available from this page yet.</p>
+          <a class="button primary disabled" id="download-button" href="#beta" aria-disabled="true">Not available yet</a>
+          <div class="release-details" id="release-details" hidden>
+            <span id="release-version"></span>
+            <a id="checksum-link" href="#beta">SHA-256 checksum</a>
+            <a id="notes-link" href="#beta">Release notes</a>
+          </div>
+          <p class="unsigned-note" id="unsigned-note"><strong>Beta note:</strong> Early builds will be unsigned, so Windows may show an unfamiliar-publisher warning. Every download will include a published SHA-256 checksum.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="feedback wrap">
+      <div>
+        <p class="eyebrow">Have a controller in mind?</p>
+        <h2>Tell us what your always-ready instrument should do.</h2>
+      </div>
+      <a class="button secondary" href="https://github.com/darmolian/ready-instrument-one/issues/new">Share feedback</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <span>&copy; <span id="year">2026</span> Darmolian</span>
+      <span>Ready Instrument One is currently in private development.</span>
+      <a href="https://github.com/darmolian/ready-instrument-one">GitHub</a>
+    </div>
+  </footer>
+</body>
+</html>
