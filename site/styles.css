@@ -196,6 +196,20 @@ footer { padding: 30px 0; border-top: 1px solid #28363a; color: var(--soft); fon
 .footer-inner { display: flex; gap: 28px; justify-content: space-between; }
 footer a { color: #b7c3c3; }
 
+.legal-page {
+  max-width: 840px;
+  padding: 90px 0 120px;
+}
+.legal-page h1 { font-size: clamp(3rem, 7vw, 5rem); }
+.legal-intro { margin: 30px 0 70px; color: var(--muted); font-size: 1.18rem; }
+.legal-page section { padding: 34px 0; border-top: 1px solid #2e3e42; }
+.legal-page section h2 { margin-bottom: 17px; font-size: 1.55rem; }
+.legal-page section p { color: var(--muted); }
+.legal-page section p:last-child { margin-bottom: 0; }
+.legal-page section a { color: #d7e2e0; text-decoration-color: #66817f; text-underline-offset: 3px; }
+.legal-page section a:hover { color: var(--green); }
+.legal-updated { margin-top: 44px; color: var(--soft); font-size: .82rem; }
+
 @media (max-width: 900px) {
   .hero { grid-template-columns: 1fr; gap: 65px; padding-top: 65px; }
   .hero-copy { max-width: 720px; }
@@ -213,6 +227,7 @@ footer a { color: #b7c3c3; }
   .instrument-panel { padding: 16px 16px 0; }
   .piano-keys { margin-inline: -16px; }
   .manifesto, .features, .beta-section { padding-block: 80px; }
+  .legal-page { padding-block: 60px 80px; }
   .feature-grid { grid-template-columns: 1fr; }
   .feedback { padding-block: 60px; align-items: flex-start; flex-direction: column; }
   .footer-inner { flex-direction: column; gap: 8px; }

@@ -14,6 +14,10 @@ The download panel reads this repository's GitHub Releases feed. Until a public
 release with a Windows setup executable exists, it remains in a clearly marked
 "preparing" state.
 
+The site uses Cloudflare Web Analytics for privacy-first aggregate traffic and
+performance measurement. Its public data practices are documented on the
+website's privacy page. The application itself does not send analytics.
+
 ## Releases
 
 Public releases are promoted from a manually approved and tested candidate in
