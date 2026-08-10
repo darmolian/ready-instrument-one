@@ -219,8 +219,8 @@ footer a { color: #b7c3c3; }
 .feedback-heading > p:not(.eyebrow) { max-width: 720px; color: var(--muted); font-size: 1.08rem; }
 .feedback-heading .feedback-privacy { margin-top: 22px; font-size: .85rem; }
 .feedback-privacy a, .technical-feedback a { color: #d7e2e0; text-underline-offset: 3px; }
-.form-panel { margin-top: 54px; min-height: 640px; padding: 12px; border: 1px solid #52656a; border-radius: 13px; background: #fff; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,.25); }
-.form-panel iframe { display: block; border-radius: 7px; }
+.form-panel { margin-top: 54px; min-height: 640px; overflow: hidden; }
+.form-panel iframe { display: block; }
 .form-panel noscript { display: block; padding: 30px; color: #172226; }
 .technical-feedback { margin: 26px 0 0; color: var(--muted); font-size: .88rem; text-align: center; }
 
@@ -243,7 +243,7 @@ footer a { color: #b7c3c3; }
   .manifesto, .features, .beta-section { padding-block: 80px; }
   .legal-page { padding-block: 60px 80px; }
   .feedback-page { padding-block: 60px 80px; }
-  .form-panel { margin-top: 38px; padding: 5px; }
+  .form-panel { margin-top: 38px; }
   .feature-grid { grid-template-columns: 1fr; }
   .feedback { padding-block: 60px; align-items: flex-start; flex-direction: column; }
   .footer-inner { flex-direction: column; gap: 8px; }
