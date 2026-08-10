@@ -16,7 +16,8 @@ release with a Windows setup executable exists, it remains in a clearly marked
 
 The site uses Cloudflare Web Analytics for privacy-first aggregate traffic and
 performance measurement. Its public data practices are documented on the
-website's privacy page. The application itself does not send analytics.
+website's privacy page. The application itself does not send analytics. Beta
+feedback is collected voluntarily through an embedded, no-login Tally form.
 
 ## Releases
 
