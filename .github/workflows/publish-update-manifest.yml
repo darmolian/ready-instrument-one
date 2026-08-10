@@ -1,0 +1,51 @@
+name: Publish update manifest
+
+on:
+  release:
+    types:
+      - published
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  publish-beta-manifest:
+    if: github.event.release.prerelease
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out public site
+        uses: actions/checkout@v6
+        with:
+          ref: main
+
+      - name: Write beta update manifest
+        env:
+          RELEASE_TAG: ${{ github.event.release.tag_name }}
+          RELEASE_NAME: ${{ github.event.release.name }}
+          RELEASE_PUBLISHED_AT: ${{ github.event.release.published_at }}
+        run: |
+          version="${RELEASE_TAG#v}"
+          jq -n \
+            --arg version "$version" \
+            --arg title "$RELEASE_NAME" \
+            --arg publishedAt "${RELEASE_PUBLISHED_AT%%T*}" \
+            '{schemaVersion: 1, channel: "beta", version: $version, publishedAt: $publishedAt, title: $title}' \
+            > site/latest-beta.json
+
+      - name: Commit published version
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add site/latest-beta.json
+          if git diff --cached --quiet; then
+            echo "The beta manifest already contains this release."
+          else
+            git commit -m "Publish update manifest for ${{ github.event.release.tag_name }}"
+            git push
+          fi
+
+      - name: Deploy the updated website
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run pages.yml --ref main
