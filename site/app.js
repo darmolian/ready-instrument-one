@@ -15,7 +15,6 @@ function showRelease(release) {
   }
 
   const checksum = findAsset(release, /SHA256\.txt$/i);
-  const notes = findAsset(release, /ReleaseNotes\.md$/i);
   const button = byId("download-button");
 
   byId("release-kicker").textContent = release.prerelease ? "Early access release" : "Current release";
@@ -35,12 +34,7 @@ function showRelease(release) {
     byId("checksum-link").hidden = true;
   }
 
-  if (notes) {
-    byId("notes-link").href = notes.browser_download_url;
-  } else {
-    byId("notes-link").href = release.html_url;
-    byId("notes-link").textContent = "Release details";
-  }
+  byId("notes-link").href = release.html_url;
 
   byId("release-details").hidden = false;
 }
