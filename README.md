@@ -7,8 +7,10 @@ Ready Instrument One. The application source is maintained privately.
 
 ## Website
 
-The static site lives in [`site/`](site/) and is deployed to GitHub Pages by
-[`.github/workflows/pages.yml`](.github/workflows/pages.yml).
+The product website now lives at
+[modalsignal.com/ready-instrument-one](https://modalsignal.com/ready-instrument-one).
+The HTML pages in [`site/`](site/) remain on GitHub Pages as redirects for old
+links. The public beta manifest remains available from this repository.
 
 The download panel reads this repository's GitHub Releases feed. Until a public
 release with a Windows setup executable exists, it remains in a clearly marked
